@@ -11,3 +11,15 @@ variable "ami_id" {
    
   
 }
+
+variable "web_sg" {
+    description = "Security group for web server"
+    type        = string
+  
+}
+
+variable "ssh_sg" {
+    description = "Security group for SSH access"
+    type        = string
+  
+}
