@@ -12,6 +12,13 @@ variable "ami_id" {
   
 }
 
+variable "enviroment" {
+    description = "Deployment environment"
+    type        = string
+    
+  
+}
+
 variable "web_sg" {
     description = "Security group for web server"
     type        = string

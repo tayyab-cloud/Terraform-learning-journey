@@ -7,12 +7,13 @@ resource "aws_instance" "instance_type" {
 
   ami           = var.ami_id
   instance_type = var.instance_type
+
     vpc_security_group_ids = [
         aws_security_group.web_sg.id,
         aws_security_group.ssh_sg.id
     ]
   tags = {
-    Name = "MyFirstInstance"
+    Name = var.enviroment == "prod" ? "ProdServer" : "DevServer"
 
   }
 }
