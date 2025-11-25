@@ -1,16 +1,15 @@
 output "ec2_public_ip" {
-    description = "The public IP address of the EC2 instance."
-    value       = aws_instance.instance_type.public_ip
+    description = "The public IP address of the EC2 instance"
+    value = module.ec2.ec2_public_ip
   
 }
-
 output "web_sg" {
-    description = "The ID of the web server security group."
-    value       = aws_security_group.web_sg.id
+    description = "The ID of the web security group"
+    value = module.ec2.web_sg
   
 }
 output "ssh_sg" {
-    description = "The ID of the SSH access security group."
-    value       = aws_security_group.ssh_sg.id
+    description = "The ID of the SSH security group"
+    value = module.ec2.ssh_sg
   
 }
