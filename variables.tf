@@ -5,28 +5,18 @@ variable "instance_type" {
   
 }
 
-variable "ami_id" {
+variable "ami_ubuntu" {
     description = "AMI ID for the EC2 instance"
     type        = string
    
   
 }
-
-variable "enviroment" {
-    description = "Deployment environment"
+ 
+ variable "ami_linux" {
+    description = "AMI ID for the Linux EC2 instance"
     type        = string
-    
-  
-}
+   
+ }
 
-variable "web_sg" {
-    description = "Security group for web server"
-    type        = string
-  
-}
 
-variable "ssh_sg" {
-    description = "Security group for SSH access"
-    type        = string
-  
-}
+

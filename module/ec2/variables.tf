@@ -10,17 +10,4 @@ variable "ami_id" {
     type        = string
   
 }
-variable "enviroment" {
-    description = "Deployment environment"
-    type        = string
-  
-}   
-variable "web_sg" {
-    description = "Security group for web server"
-    type        = string
-  
-}
-variable "ssh_sg" {
-    description = "Security group for SSH access"
-    type        = string    
-}
+
