@@ -14,3 +14,10 @@ module "dbserver" {
   instance_type = var.instance_type   
   ami_id        = var.ami_linux       
 }
+
+module "aws_s3_bucket"  {
+  source      = "./module/s3"
+  s3_bucket   = var.root_s3_bucket
+  
+  
+}
