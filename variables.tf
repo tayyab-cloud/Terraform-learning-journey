@@ -18,5 +18,10 @@ variable "ami_ubuntu" {
    
  }
 
+variable "root_s3_bucket" {
+    description = "Root S3 Bucket Name"
+    type        = string
+  
+}
 
 
