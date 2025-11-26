@@ -18,3 +18,9 @@ output "ssh_sg" {
     value = module.ec2.ssh_sg
   
 }
+
+output "s3_bucket_id" {
+    description = "The ID of the S3 bucket"
+    value = module.aws_s3_bucket.bucket_id
+  
+}
