@@ -1,11 +1,11 @@
-
 output "subnet_id" {
     description = "The ID of the created subnet"
-    value       = module.networking.subnet_id
+    value       = aws_subnet.my_subnet.id
   
 }
+
 output "my_sg" {
     description = "The ID of the security group"
-    value       = module.networking.my_sg
+    value       = aws_security_group.my_sg.id
   
 }

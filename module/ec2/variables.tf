@@ -11,3 +11,15 @@ variable "ami_id" {
   
 }
 
+variable "subnet_id" {
+    description = "The ID of the subnet where EC2 will be launched"
+    type        = string
+  
+}
+
+variable "sg_id" {
+
+    type = string
+  
+}
+

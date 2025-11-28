@@ -12,14 +12,14 @@ variable "ami_ubuntu" {
   
 }
  
- variable "ami_linux" {
-    description = "AMI ID for the Linux EC2 instance"
-    type        = string
-   
- }
 
-variable "root_s3_bucket" {
-    description = "Root S3 Bucket Name"
+variable "root_vpc_cidr" {
+    description = "The CIDR block for the VPC"
+    type        = string
+  
+}
+variable "root_subnet_cidr" {
+    description = "The CIDR block for the subnet"
     type        = string
   
 }
