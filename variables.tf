@@ -1,8 +1,13 @@
 variable "instance_type" {
     description = "EC2 instance type"
-    type        = string
-    default     = "t2.micro"
+    type        = map(string)
+    default = {
+        "dev"  = "t2.micro"
+        "prod" = "t2.micro"    
+        "stage" = "t2.micro"
+    
   
+}
 }
 
 variable "ami_ubuntu" {
@@ -13,15 +18,15 @@ variable "ami_ubuntu" {
 }
  
 
-variable "root_vpc_cidr" {
-    description = "The CIDR block for the VPC"
-    type        = string
+# variable "root_vpc_cidr" {
+#     description = "The CIDR block for the VPC"
+#     type        = string
   
-}
-variable "root_subnet_cidr" {
-    description = "The CIDR block for the subnet"
-    type        = string
+# }
+# variable "root_subnet_cidr" {
+#     description = "The CIDR block for the subnet"
+#     type        = string
   
-}
+# }
 
 

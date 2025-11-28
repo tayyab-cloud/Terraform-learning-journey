@@ -4,18 +4,11 @@ provider "aws" {
 
 
 
-module "networking" {
-  source      = "./module/vpc"
-  vpc_cidr    = var.root_vpc_cidr
-  subnet_cidr = var.root_subnet_cidr
+module "instance_type" {
+  source        = "./module/ec2"
+  instance_type = lookup(var.instance_type, terraform.workspace, "t2.micro")
+  ami_id        = var.ami_ubuntu
   
 }
 
-# --- MODULE 1: WEB SERVER ---
-module "compute" {
-  source        = "./module/ec2"      
-  instance_type = var.instance_type   
-  ami_id        = var.ami_ubuntu  
-  subnet_id     = module.networking.subnet_id
-  sg_id         = module.networking.my_sg    
-}
+

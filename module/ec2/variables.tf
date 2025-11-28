@@ -1,8 +1,6 @@
 variable "instance_type" {
     description = "EC2 instance type"
-    type        = string
-    default     = "t2.micro"
-  
+    type = string
 }
 
 variable "ami_id" {
@@ -11,15 +9,6 @@ variable "ami_id" {
   
 }
 
-variable "subnet_id" {
-    description = "The ID of the subnet where EC2 will be launched"
-    type        = string
-  
-}
 
-variable "sg_id" {
 
-    type = string
-  
-}
 
