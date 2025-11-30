@@ -26,6 +26,8 @@ terraform.rc
 # .gitignore file me ye add kro
 mykey
 mykey.pub
+*.pem
+*.terraform.lock.hcl
 output.log
 __pycache__/
 .terraform/
