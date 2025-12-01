@@ -5,15 +5,7 @@ provider "aws" {
 
 
 
-import {
-  id = "i-020c0e758256e6a53"
-  to = aws_instance.this
-}
 
-import {
-  id = "i-090513eb0c9d75dce"
-  to = aws_instance.server
-}
 
 
 # __generated__ by Terraform
